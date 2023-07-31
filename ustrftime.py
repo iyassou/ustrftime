@@ -1,9 +1,6 @@
 import time
 import re
 
-# Supported formatting directives listed below.
-# Full list: https://docs.python.org/3/library/time.html#time.strftime
-
 __DIRECTIVE_REGEX_STR: str  = '%[aAbBcdHIjmMpSUwWxXyY%]'
 __DIRECTIVE_REGEX: object   = re.compile(__DIRECTIVE_REGEX_STR)
 __DATE_TIME_FMTDIR: str     = '%a %b %d %H:%M:%S %Y'    # %c
@@ -17,16 +14,6 @@ __MOTY: tuple = (
     'January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December'
 )
-
-# MicroPython time tuple format:
-# - year
-# - month   [1-12]
-# - mday    [1-31]
-# - hour    [0-23]
-# - minute  [0-59]
-# - second  [0-59]
-# - weekday [0Mon - 6Sun]
-# - yearday [1-366]
 
 __YEAR      = const(0)
 __MONTH     = const(1)
